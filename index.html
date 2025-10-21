@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mao Durian — Premium Durians</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: url('https://imgs.search.brave.com/Y30O7qEF4Xb-QxwQ8L38cAlno4-jNyl18j2lVDuwuI4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzc4LzcxLzI5/LzM2MF9GXzM3ODcx/MjkzNV9kSmVGdXl3/anMyN1A0M2JQQTA3/RzVBWndVYUl6VVFC/eC5qcGc') no-repeat center center fixed;
+      background-size: cover;
+      color: #ddd; 
+      overflow-x: hidden;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(4px);
+      z-index: -1;
+    }
+
+    header { 
+      position: fixed; width: 100%; top: 0; left: 0; 
+      background: rgba(0,0,0,0.85); 
+      backdrop-filter: blur(10px); 
+      z-index: 10; 
+      display: flex; align-items: center; justify-content: space-between; 
+      padding: 1rem 2rem; 
+    }
+    header img { height: 60px; cursor: pointer; transition: transform .3s; }
+    header img:hover { transform: scale(1.05); }
+    header nav a { color: #ddd; text-decoration: none; margin: 0 1rem; font-size: 0.95rem; transition: color .3s; }
+    header nav a:hover { color: #f2c94c; }
+
+    section { padding: 100px 20px; max-width: 1200px; margin: auto; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; color: #fff; }
+    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
+    .hero h1 { font-size: 3.5rem; color: #f2c94c; }
+    .hero p { margin-top: 1rem; font-size: 1.2rem; color: #ccc; max-width: 700px; }
+    .btn { background: #f2c94c; color: #000; border: none; padding: 0.8rem 1.6rem; border-radius: 8px; font-weight: 600; margin-top: 2rem; cursor: pointer; transition: all .3s; }
+    .btn:hover { background: #ffda66; transform: scale(1.05); }
+
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .product { background: rgba(17,17,17,0.9); border: 1px solid #222; border-radius: 16px; overflow: hidden; transition: transform .4s, border-color .4s; }
+    .product:hover { transform: translateY(-6px); border-color: #f2c94c; }
+    .product img { width: 100%; height: 200px; object-fit: cover; }
+    .product-content { padding: 1.5rem; }
+    .product h3 { color: #f2c94c; margin-bottom: 0.5rem; }
+
+    footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid #222; color: #777; font-size: 0.9rem; }
+
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    a.contact-link { color: #f2c94c; text-decoration: none; font-weight: 600; }
+    a.contact-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Durian/WhatsApp Image 2025-10-21 at 5.15.54 PM.jpeg" id="logo" />
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero fade-in" id="home">
+    <h1>Mao Durian</h1>
+    <p>Where luxury meets the King of Fruits. Taste the richness of Malaysia’s finest durians, handpicked and crafted for true indulgence.</p>
+    <button class="btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+  </section>
+
+  <section id="products" class="fade-in">
+    <h2>Our Selection</h2>
+    <div class="products" style="margin-top:2rem">
+      <div class="product">
+        <img src="https://imgs.search.brave.com/n6qve5Pvpg_u-DRLcGTG-d96637gG4_yDa_Xmv0j6y8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9jbG9z/ZS11cC1kdXJpYW4t/a2FtcHVuZy1raW5n/LWZydWl0LWFzaWFu/LTE1NzAwNzk0My5q/cGc" alt="Durian Kampung">
+        <div class="product-content">
+          <h3>Durian Kampung</h3>
+          <p>Rich, buttery, and perfectly balanced — a signature of premium Mao Durian craftsmanship.</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://imgs.search.brave.com/AyIc9-L6IRvawyBegEpIjdho15CNLI7XIO_odl4msvU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzI2LzAyLzYy/LzM2MF9GXzI2MDI2/MjIxX3ZhSkZzakZa/S082V1I1cnFXRmNa/OTZUY241ZWVCVWZ4/LmpwZw" alt="Durian Kahwin">
+        <div class="product-content">
+          <h3>Durian Kahwin</h3>
+          <p>For connoisseurs seeking bold, complex notes with a hint of whisky-aged depth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="fade-in">
+    <h2>About Mao Durian</h2>
+    <p style="margin-top:1rem; max-width:800px; line-height:1.6; color:#ccc">
+      Mao Durian is a premium durian boutique that celebrates Malaysia’s most treasured fruit. 
+      From orchard to packaging, we maintain the highest standards of freshness and flavor. 
+      Our fruits are hand-selected by expert growers and delivered with unmatched presentation — 
+      a symbol of elegance and indulgence.
+    </p>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact Us</h2>
+    <p style="margin-top:1rem; color:#ccc">
+      📍 Perak, Malaysia<br>
+      📞 Whatsapp: <a href="https://wa.me/60125582733" target="_blank" class="contact-link">+6012-5582733</a><br>
+      ✉️ Email: <a href="mailto:Durianmao1@gmail.com" class="contact-link">Durianmao1@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Mao Durian — All Rights Reserved
+  </footer>
+
+  <script>
+    // Smooth scroll and fade-in effect
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    document.getElementById('logo').addEventListener('click', () => {
+      document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
